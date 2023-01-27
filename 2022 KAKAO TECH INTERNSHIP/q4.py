@@ -24,10 +24,8 @@ def solution(n, paths, gates, summits):
         for dir,cost in adj[cur]:
             cost = max(dis[cur],cost)
             if dir not in exist_st and dis[dir] > cost:
-                if dir in exist_en:
-                    dis[dir] = cost
-                else:
-                    dis[dir] = cost
+                dis[dir] = cost
+                if dir not in exist_en:
                     heappush(q,(dis[dir],dir))
     for en in sorted(summits):
         if dis[en] < ans[1]:
