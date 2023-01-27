@@ -1,4 +1,4 @@
-# 걍 다익스트라 쓰면 될듯
+# 걍 다익스트라 쓰면 될듯?
 from heapq import heappush, heappop
 inf = float('inf')
 
